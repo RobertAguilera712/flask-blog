@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% set active_page = 'home' %}
+{% block content %}
+    {% for post in posts %}
+        <article class="card text-dark bg-light mb-4">
+            <div class="card-header text-primary">
+                {{ post.author }}
+                <small class="text-muted">{{ post.date_posted }}</small>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">{{ post.title }}</h3>
+                <p class="card-text">{{ post.content }}</p>
+            </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
