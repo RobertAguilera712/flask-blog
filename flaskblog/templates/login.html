@@ -5,10 +5,10 @@
     <form method="post" action="">
         {{ form.hidden_tag() }}
         <div class="card-body">
-            <fieldset class="form-group ">
+            <fieldset>
                 <legend class="border-bottom mb-4 card-title">Log In</legend>
-                <div class="form-group mb-4">
-                    {{ form.email.label(class="form-control-label") }}
+                <div class="mb-3">
+                    {{ form.email.label(class="form-label") }}
                     {% if form.email.errors %}
                         {{ form.email(class="form-control form-control-lg is-invalid") }}
                         <div class="invalid-feedback">
@@ -20,8 +20,8 @@
                         {{ form.email(class="form-control form-control-lg") }}
                     {% endif %}
                 </div>
-                <div class="form-group mb-4">
-                    {{ form.password.label(class="form-control-label") }}
+                <div class="mb-3">
+                    {{ form.password.label(class="form-label") }}
                     {% if form.password.errors %}
                         {{ form.password(class="form-control form-control-lg is-invalid") }}
                         <div class="invalid-feedback">
@@ -33,12 +33,12 @@
                         {{ form.password(class="form-control form-control-lg") }}
                     {% endif %}
                 </div>
-                <div class="form-check mb-2">
+                <div class="form-check mb-3">
                     {{ form.remember(class="form-check-input") }}
                     {{ form.remember.label(class="form-check-label") }}
                 </div>
             </fieldset>
-            <div class="form-group mb-2">
+            <div class="mb-3">
                 {{ form.submit(class="btn btn-outline-info") }}
             </div>
             <small class="text-muted">
